@@ -31,7 +31,8 @@ const storeSchema = new mongoose.Schema({
             type: String,
             required: "Debes agregar una dirección"
         }
-    }
+    },
+    photo: String
 });
 
 storeSchema.pre('save', function (next) {

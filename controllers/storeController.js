@@ -1,5 +1,21 @@
 const mongoose = require('mongoose');
 const Store = mongoose.model('Store');
+const multer = require('multer');
+const jimp = require('jimp');
+const uuid = require('uuid');
+
+const multerConfig = {
+  store: multer.memoryStorage(),
+  fileFilter: (req, file, next) => {
+    const isPhoto = file.mimetype.startsWith('image/');
+    if(isPhoto){
+      next(null, true);
+    }else{
+      next('El tipo de archivo no esta permitido', false);
+    }
+
+  }
+};
 
 exports.homePage = (req, res) => {
   res.render('index');
@@ -7,6 +23,26 @@ exports.homePage = (req, res) => {
 
 exports.addStore = (req, res) => {
     res.render('editStore', {title: 'Agregar Store'})
+};
+
+exports.upload = multer(multerConfig).single('photo');
+
+exports.resize = async (req, res, next) => {
+  if(!req.file){
+    next();
+    return;
+  }
+
+  const extension = req.file.mimetype.split('/')[1];
+  req.body.photo = `${uuid.v4()}.${extension}`;
+
+  const photo = await jimp.read(req.file.buffer);
+
+  await photo.resize(800, jimp.AUTO);
+  await photo.write(`./public/uploads/${req.body.photo}`);
+
+  next();
+
 };
 
 exports.createStore = async (req, res) => {
@@ -35,4 +71,11 @@ exports.updateStore = async (req, res) => {
   }).exec();
   req.flash('success', `<strong>${store.name}</strong> editado con éxito, <a href="/stores/${store.slug}">Ver Store →</a>`);
   res.redirect(`/store/${store._id}/edit`);
+};
+
+
+exports.getStoresBySlug = async (req, res, next) => {
+  const store = await Store.findOne({slug:req.params.slug});
+  if(!store) return next();
+  res.render('store', { store, title: store.name });
 };
