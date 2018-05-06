@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8ff5ca0-2aa0-4115-a901-d4185989325c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/views/store.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/storeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/storeController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/Store.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/dist/App.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/dist/App.bundle.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/mixins/_storeForm.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/mixins/_storeForm.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storeController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="storeController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/storeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="483">
@@ -47,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Store.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Store.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Store.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+            <state relative-caret-position="391">
+              <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -143,11 +137,11 @@
         <option value="$PROJECT_DIR$/public/javascripts/delicious-app.js" />
         <option value="$PROJECT_DIR$/variables.env" />
         <option value="$PROJECT_DIR$/public/javascripts/modules/autocomplete.js" />
-        <option value="$PROJECT_DIR$/models/Store.js" />
         <option value="$PROJECT_DIR$/views/store.pug" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/mixins/_storeForm.pug" />
         <option value="$PROJECT_DIR$/controllers/storeController.js" />
+        <option value="$PROJECT_DIR$/models/Store.js" />
       </list>
     </option>
   </component>
@@ -280,12 +274,12 @@
       <workItem from="1524497117588" duration="401000" />
       <workItem from="1524842057441" duration="597000" />
       <workItem from="1525368228945" duration="646000" />
-      <workItem from="1525562088986" duration="2774000" />
+      <workItem from="1525562088986" duration="3226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20544000" />
+    <option name="totallyTimeSpent" value="20996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -644,13 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/store.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -676,6 +663,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
           <caret line="79" column="52" selection-start-line="79" selection-start-column="52" selection-end-line="79" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Store.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="45" column="33" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -35,12 +35,19 @@ const storeSchema = new mongoose.Schema({
     photo: String
 });
 
-storeSchema.pre('save', function (next) {
+storeSchema.pre('save',  async function (next) {
     if(!this.isModified('name')){
         next();
         return;
     }
     this.slug = slug(this.name);
+
+    const storeRegex = new RegExp(`^(${this.slug})((-[0-9]*$)?)$`);
+    const storesWithSlug = await this.constructor.find({slug:storeRegex});
+
+    if(storesWithSlug.length){
+        this.slug = `${this.slug}-${storesWithSlug.length + 1}`;
+    }
     next();
 });
 
