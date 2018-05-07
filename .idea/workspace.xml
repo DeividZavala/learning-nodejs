@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8ff5ca0-2aa0-4115-a901-d4185989325c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/start.js" beforeDir="false" afterPath="$PROJECT_DIR$/start.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/public/dist/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +28,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="465">
+              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -49,8 +46,17 @@
       <file leaf-file-name="authController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/authController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
+            <state relative-caret-position="460">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -84,20 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="userController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/userController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="498">
+            <state relative-caret-position="460">
               <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="register.pug" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/register.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="58" lean-forward="true" selection-start-line="12" selection-start-column="58" selection-end-line="12" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -150,16 +147,16 @@
         <option value="$PROJECT_DIR$/models/Store.js" />
         <option value="$PROJECT_DIR$/controllers/storeController.js" />
         <option value="$PROJECT_DIR$/views/tag.pug" />
-        <option value="$PROJECT_DIR$/models/User.js" />
         <option value="$PROJECT_DIR$/views/login.pug" />
         <option value="$PROJECT_DIR$/views/register.pug" />
         <option value="$PROJECT_DIR$/views/mixins/_loginForm.pug" />
         <option value="$PROJECT_DIR$/start.js" />
-        <option value="$PROJECT_DIR$/controllers/authController.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/handlers/passport.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/controllers/userController.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/controllers/authController.js" />
+        <option value="$PROJECT_DIR$/models/User.js" />
       </list>
     </option>
   </component>
@@ -274,18 +271,18 @@
       <workItem from="1524497117588" duration="401000" />
       <workItem from="1524842057441" duration="597000" />
       <workItem from="1525368228945" duration="646000" />
-      <workItem from="1525562088986" duration="8512000" />
+      <workItem from="1525562088986" duration="9040000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26282000" />
+    <option name="totallyTimeSpent" value="26810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="642" y="0" width="638" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18638574" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18638574" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32863188" />
@@ -594,13 +591,6 @@
     <entry file="file://$PROJECT_DIR$/models/register.pug">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/register.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -652,24 +642,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/userController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        <state relative-caret-position="465">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/authController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
+        <state relative-caret-position="460">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/userController.js">
+    <entry file="file://$PROJECT_DIR$/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+        <state relative-caret-position="483">
+          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
         </state>
       </provider>
     </entry>
