@@ -21,7 +21,9 @@ const userSchema = new Schema({
         type: String,
         required: "Proporciona un email",
         trim: true
-    }
+    },
+    resetPasswordToken: String,
+    resetExpirationDate: Date
 
 });
 
