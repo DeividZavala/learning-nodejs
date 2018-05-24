@@ -46,6 +46,7 @@ exports.resize = async (req, res, next) => {
 };
 
 exports.createStore = async (req, res) => {
+  req.body.author = req.user._id;
   const store = await (new Store(req.body)).save();
   req.flash("success", `Se guardo con éxito ${store.name}`);
   res.redirect(`/store/${store.slug}`);
@@ -56,10 +57,17 @@ exports.getStores = async (req,res) => {
     res.render('stores', {title: 'Stores', stores})
 };
 
+const confirmOwner = (store, user) => {
+  if(!store.author.equals(user._id)){
+    throw Error("Epale morro esta no es tu tienda");
+  }
+};
+
 exports.editStore = async (req, res) => {
     // 1.- Obtener el store dado el ID
   const store = await Store.findOne({_id : req.params.id});
   // 2.- Checar si eres dueño del store TODO
+  confirmOwner(store, req.user);
   res.render('editStore', {title: `Editando ${store.name}`, store});
 };
 
@@ -89,5 +97,41 @@ exports.getStoresByTag = async (req, res) => {
   const [tags, stores] = await Promise.all([tagsPromise, storesPromise]);
 
     res.render('tag', { tags, title: 'Tags', tag, stores });
+
+};
+
+exports.searchStore = async (req,res) => {
+  const stores = await Store.find({
+      $text: {
+        $search: req.query.q
+      }
+  },{
+      score: {
+        $meta: 'textScore'
+      }
+  })
+  .sort({
+      score: {$meta: 'textScore'}
+  })
+  .limit(5);
+    res.json(stores);
+};
+
+exports.mapStores = async (req, res) => {
+  const coordinates = [req.query.lng, req.query.lat].map(parseFloat);
+  const q = {
+    location: {
+        $near: {
+            $geometry: {
+                type: "Point",
+                coordinates
+            },
+            $maxDistance: 10000
+        }
+    }
+  };
+
+  const stores = await Store.find(q).select("slug name description location");
+  res.json(stores);
 
 };
