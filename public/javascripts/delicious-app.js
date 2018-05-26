@@ -4,9 +4,13 @@ import { $, $$ } from './modules/bling';
 import autocomplete from './modules/autocomplete';
 import makeMap from './modules/map';
 import typeAhead from './modules/typeAhead';
+import ajaxHeart from './modules/heart';
 
 typeAhead($('.search'));
 
 makeMap( $('#map') );
 
 autocomplete($('#address'), $('#lng'), $('#lat'));
+
+const heartForms = $$('form.heart');
+heartForms.on('submit', ajaxHeart);

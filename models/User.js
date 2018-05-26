@@ -23,8 +23,13 @@ const userSchema = new Schema({
         trim: true
     },
     resetPasswordToken: String,
-    resetExpirationDate: Date
-
+    resetExpirationDate: Date,
+    hearts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Store"
+        }
+    ]
 });
 
 userSchema.virtual('gravatar').get(function(){
