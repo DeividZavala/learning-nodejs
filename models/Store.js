@@ -69,4 +69,10 @@ storeSchema.statics.getTagsList = function(){
     ])
 };
 
+storeSchema.virtual("reviews", {
+    ref: "Review",
+    localField: "_id",
+    foreignField: "store"
+});
+
 module.exports = mongoose.model('Store', storeSchema);
