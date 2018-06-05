@@ -53,8 +53,29 @@ exports.createStore = async (req, res) => {
 };
 
 exports.getStores = async (req,res) => {
-    const stores = await Store.find();
-    res.render('stores', {title: 'Stores', stores})
+
+    const page = req.params.page || 1;
+    const limit = 4;
+    const skip = (page * limit) - limit;
+
+    const storesPromise = Store
+        .find()
+        .skip(skip)
+        .limit(limit)
+        .sort({ created: "desc"});
+
+    const coutPromise = Store.count();
+
+    const [stores, count] = await Promise.all([storesPromise, coutPromise]);
+    const pages = Math.ceil(count / limit);
+
+    if(!stores.length && skip){
+        req.flash('info',`La página a la que intentas acceder no exite, seras redirigido a la pagina ${pages}`);
+        res.redirect(`/stores/page/${pages}`);
+        return;
+    }
+
+    res.render('stores', {title: 'Stores', stores, count , page, pages})
 };
 
 const confirmOwner = (store, user) => {
